@@ -5,5 +5,6 @@ class ApplicationController < ActionController::Base
     if !current_user.admin?
       flash[:alert] = "你不是管理者"
       redirect_to root_path
+    end 
   end
 end

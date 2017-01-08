@@ -1,5 +1,5 @@
 class Admin::JobsController < ApplicationController
-  before_filter :authenticate_user! only: [:new, :edit, :create, :update, :destroy]
+  before_filter :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
   before_filter :require_is_admin
   def index
     @jobs=Job.all
@@ -44,7 +44,7 @@ class Admin::JobsController < ApplicationController
     redirect_to jobs_path
   end
 
-  
+
   private
 
   def job_params
