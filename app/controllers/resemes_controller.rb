@@ -1,0 +1,2 @@
+class ResemesController < ApplicationController
+end

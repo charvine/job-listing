@@ -1,0 +1,2 @@
+module ResemesHelper
+end
