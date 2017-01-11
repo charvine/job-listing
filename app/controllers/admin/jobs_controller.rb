@@ -5,17 +5,16 @@ class Admin::JobsController < ApplicationController
 
   def publish
     @job = Job.find(params[:id])
-    @job.is_hidden = false
-    @job.save
+    @job.publish!
     redirect_to :back
   end
 
   def hide
     @job = Job.find(params[:id])
-    @job.is_hidden = true
-    @job.save
+    @job.hide!
     redirect_to :back
   end
+  
   def index
     @jobs= Job.all
   end
@@ -27,10 +26,7 @@ class Admin::JobsController < ApplicationController
   def show
     @job= Job.find(params[:id])
 
-    if @job.is_hidden
-      flash[:warning] = "This Job already archieved"
-      redirect_to root_path
-    end
+
   end
 
   def edit
