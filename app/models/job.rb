@@ -16,4 +16,7 @@ end
 
 scope :published, -> { where(is_hidden: false)}
 scope :recent, -> { order('created_at DESC')}
+
+has_many :resumes
+
 end
