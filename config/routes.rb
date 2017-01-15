@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :jobs do
     resources :resumes
   end
-  root 'jobs#index'
+  root 'welcome#index'
 
   namespace :admin do
     resources :jobs do
@@ -14,5 +14,7 @@ Rails.application.routes.draw do
       resources :resumes
     end
   end
+    resources :welcome do
+    end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
