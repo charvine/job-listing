@@ -23,6 +23,6 @@ Job.create!([title: "CEO", description: "當老大", wage_lower_bound: "#{50000}
   wage_upper_bound: "#{70000}"])
 
   create_managers = for i in 1..3 do
-                    Job.create!([title: "第#{i}部門經理", description: "罵人的", wage_lower_bound: "#{i*10000}", wage_upper_bound: "#{i*20000}"])
+                    Job.create!([title: "第#{i}部門經理", description: "罵人的", wage_lower_bound: "#{i*1}", wage_upper_bound: "#{i*20000}"])
 
                   end
