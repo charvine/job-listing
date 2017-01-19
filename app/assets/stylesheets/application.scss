@@ -1,40 +1,40 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- *= require font-awesome
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*= require font-awesome
+*/
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
- @import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
 
 
- .custab{
+.custab{
    border: 1px solid #ccc;
    padding: 5px;
    margin: 5% 0;
    box-shadow: 3px 3px 2px #ccc;
    transition: 0.5s;
- }
+}
 
- .custab:hover{
+.custab:hover{
    box-shadow: 3px 3px 0px transparent;
    transition: 0.5s;
- }
+}
 
- .jumbotron {
-  background-image:url('http://y.photo.qq.com/img?s=n0m7YMg0L&l=y.jpg');
+.jumbotron {
+background-image:url('http://y.photo.qq.com/img?s=n0m7YMg0L&l=y.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 110px;
@@ -42,7 +42,7 @@
 
 .jumbotron h1, .jumbotron .h1 {
     text-align: left;//文字左对齐
-    color: #222;	//字体颜色
+    color: #222;     //字体颜色
     padding: 50px 20px 0;//上50px，左右20px，下0
 }
 
@@ -110,22 +110,24 @@
    padding: 30px 15px;//上下10px,左右15px
    line-height: 0px;//文字行高
    text-align: center;
+   font-size: 26px;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #FF6F00;//鼠标放置在链接上的文字颜色
+  color: #d0d3c5;//鼠标放置在链接上的文字颜色
   background-color: transparent;//鼠标放置在链接上的背景颜色，这里设为透明
 }
 
 .navbar-default .navbar-nav > li > a{
   color: white;
+  font-size: 18px;
   padding: 30px 15px
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #FF6F00;
+  color: #d0c3c5;
   background-color: transparent;
   padding: 30px 15px
 }
@@ -151,23 +153,17 @@
   border-radius: 0;//圆角为0
 }
 
-.btn-danger {
-    color: #fff;//字体颜色
-    background-color: #EF6C00;//背景颜色
-    border-color: #EF6C00;//边框颜色
-}
 
-.btn-danger:hover {
-    background-color: #E65100;//鼠标放置在btn上的背景颜色
-    border-color: #E65100;//鼠标放置在btn上的边框颜色
-}
 
 .btn-lg, .btn-group-lg > .btn {
     padding: 8px 16px;//通过padding来决定btn的大小
     font-size: 20px;//btn文字大小
     letter-spacing: 3px;//调整文字间距
     border-radius: 3px;//btn圆角
+    text-align: center;
+    margin:auto;
     width: 200px;//这里用指定宽度把btn拉得更长
+    border:none;
 }
 
 .navbar-default .nav-tabs  > ul > a{
@@ -724,9 +720,211 @@
 
 
 body {
-background: #EBECED;
+background: #e9c77b;
 }
 
 footer p {color: black;
           margin-top: 0;
         }
+
+
+
+        .panel-pricing {
+          -moz-transition: all .3s ease;
+          -o-transition: all .3s ease;
+          -webkit-transition: all .3s ease;
+        }
+        .panel-pricing:hover {
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+        }
+        .panel-pricing .panel-heading {
+          padding: 20px 10px;
+        }
+        .panel-pricing .panel-heading .fa {
+          margin-top: 10px;
+          font-size: 58px;
+        }
+        .panel-pricing .list-group-item {
+          color: #777777;
+          background-color: #fbfbfd;
+          font-size: 18px;
+          border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+        }
+        .panel-pricing .list-group-item:last-child {
+          border-bottom-right-radius: 0px;
+          border-bottom-left-radius: 0px;
+        }
+        .panel-pricing .list-group-item:first-child {
+          border-top-right-radius: 0px;
+          border-top-left-radius: 0px;
+        }
+        .panel-pricing .panel-body {
+          background-color: #00281F;
+          font-size: 25px;
+          color: white;
+          padding: 15px;
+          margin: 0px;
+        }
+
+        .panel-pricing .panel-footer {
+          background-color: #fbfbfd;
+          font-size: 25px;
+          color: #777777;
+          padding: 15px;
+          margin: 0px;
+          border: 10px;
+        }
+
+
+
+        .panel {
+            border: 0;
+        }
+
+        .panel-danger > .panel-heading {
+          background-color: #EDFAFD;
+          color: #202c28;
+          border-color:#EDFAFD;
+        }
+
+
+        .btn-danger {
+            background: #EDFAFD;
+            color: black;
+            padding:10,100,10,100;
+        }
+
+        .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open > .dropdown-toggle.btn-danger {
+            background: #08708A;
+        }
+
+        .btn-danger:active, .btn-danger.active {
+            background: #EDFAFD;
+            box-shadow: none;
+        }
+
+
+
+        .panel-primary > .panel-heading {
+          background-color: #AED9DA;
+          color: #000;
+          border-color:none;
+        }
+
+
+        .btn-primary {
+            background: #AED9DA;
+            color: black;
+            padding:10,100,10,100;
+        }
+
+        .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+            background: #08708A;
+        }
+
+        .btn-primary:active, .btn-primary.active {
+            background: #EDFAFD;
+            box-shadow: none;
+        }
+
+
+
+        .panel-success > .panel-heading {
+          background-color: #3DDAD7;
+          color: #000;
+          border-color:none;
+        }
+
+
+        .btn-success {
+            background: #3DDAD7;
+            color: black;
+            padding:10,100,10,100;
+        }
+
+        .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success {
+            background: #08708A;
+        }
+
+        .btn-success:active, .btn-danger.active {
+            background: #EDFAFD;
+            box-shadow: none;
+        }
+
+
+
+        .panel-info > .panel-heading {
+          background-color: #2A93D5;
+          color: #fff;
+          border-color:none;
+        }
+
+
+        .btn-info {
+            background: #2A93D5;
+            color: #fff;
+            padding:10,100,10,100;
+        }
+
+        .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info {
+            background: #08708A;
+        }
+
+        .btn-info:active, .btn-danger.active {
+            background: #EDFAFD;
+            box-shadow: none;
+        }
+
+
+
+        .panel-warning > .panel-heading {
+          background-color: #135589;
+          color: #fff;
+          border-color:none;
+        }
+
+
+        .btn-warning {
+            background: #135589;
+            color: #fff;
+            padding:10,100,10,100;
+        }
+
+        .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open > .dropdown-toggle.btn-warning {
+            background: #08708A;
+        }
+
+        .btn-warning:active, .btn-danger.active {
+            background: #EDFAFD;
+            box-shadow: none;
+        }
+
+
+        .panel-default > .panel-heading {
+          background-color: #f4e8c1;
+          color: #000;
+          border-color:none;
+          font-size: 18px;
+        }
+
+
+        .with-nav-tabs.panel-default .nav-tabs > li > a,
+
+        .with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+            color: #777;
+            background-color: #f4e8c1;
+        }
+
+        .with-nav-tabs.panel-default .nav-tabs > li > a:hover,{
+          color: #777;
+        	background-color: #fff;
+        }
+
+        .with-nav-tabs.panel-default .nav-tabs > li.active > a,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:focus {
+	color: #777;
+	background-color: #fff;
+	border-color: #ddd;
+	border-bottom-color: transparent;
+}

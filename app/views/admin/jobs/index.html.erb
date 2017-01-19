@@ -1,57 +1,143 @@
- <table class="table table-boldered table-striped custab" >
-    <thead>
-        <tr>
-            <td>
-                职缺
-            </td>
 
-            <td>
-              收到履历数量
-            </td>
-            <td>
-                薪资下限
-            </td>
-            <td>
-                薪资上限
-            </td>
-            <td>
-                管理选项
-            </td>
-            <td>
-                刊登时间
-            </td>
-        </tr>
-    </thead>
+<div class="container">
+    <div class="page-header">
+        <h1 align="center">成长比成功更重要，选一个吧！<span class=" label label-default">:)</span></h1>
+    </div>
+    <div class="row">
+    	<div class="col-md-12">
+            <div class="panel with-nav-tabs panel-default" role="tablelist">
+                <div class="panel-heading">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="/admin/jobs">公告</a></li>
+                            <li><a href="/jobs">表格</a></li>
 
-    <% @jobs.each do |job| %>
-    <tr>
+                        </ul>
+                </div>
 
-        <td>
-            <%= render_job_status(job) %>
-
-            <%= link_to(job.title, admin_job_path(job)) %>
-        </td>
-        <td> <%= link_to(job.resumes.count, admin_job_resumes_path(job)) %> </td>
-        <td> <%= job.wage_lower_bound %> </td>
-        <td> <%= job.wage_upper_bound %> </td>
-        <td>
-
-            <%= link_to edit_admin_job_path(job), class: "btn btn-xs btn-info" do %><i class="fa fa-pencil"></i><% end %>
-
-            <%= link_to admin_job_path(job), :method => :delete, :class => "btn btn-xs  btn-danger", :data => { :confirm => "Are you sure?" } do %><i class="fa fa-trash-o"></i><% end %>
-            <% if job.is_hidden %>
+            </div>
+        </div>
+	</div>
+</div>
 
 
-             <%= link_to Publish_admin_job_path(job) , :method => :post, :class => "btn btn-xs btn-success" do %><i class="fa fa-eye"></i><% end %>
-        <% else %>
+<br/><br/>
 
+  <!-- Plans -->
+  <section id="plans">
+      <div class="container">
+          <div class="row">
 
-            <%= link_to hide_admin_job_path(job), :method => :post,  :class => "btn btn-xs btn-warning" do %><i class="fa fa-eye-slash"></i><% end %>
-            <% end %>
-        </td>
-        <td>
-            <%= job.created_at %>
-        </td>
-    </tr>
-    <% end %>
-</table>
+              <!-- item -->
+              <div class="col-md-4 text-center">
+                  <div class="panel panel-danger panel-pricing">
+                      <div class="panel-heading">
+                          <i class="fa fa-user-o"></i>
+                          <h3>编程小白</h3>
+                      </div>
+                      <div class="panel-body text-center">
+                          <p><strong>¥ -1000 ～ 0 / Month</strong></p>
+                      </div>
+                      <ul class="list-group text-center">
+                          <li class="list-group-item"><i class="fa fa-check"></i> 没有玻璃心</li>
+                          <li class="list-group-item"><i class="fa fa-check"></i> 每天两小时</li>
+                          <li class="list-group-item"><i class="fa fa-check"></i>  找战友组队</li>
+                      </ul>
+                      <div class="panel-footer ">
+                          <a class="btn btn-lg btn-block btn-danger" href="/jobs/1">我不怕</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- /item -->
+
+              <!-- item -->
+              <div class="col-md-4 text-center">
+                  <div class="panel panel-primary panel-pricing">
+                      <div class="panel-heading">
+                          <i class="fa fa-user-circle"></i>
+                          <h3>高级新手</h3>
+                      </div>
+                      <div class="panel-body text-center">
+                          <p><strong>￥一万 ~ 二万 / Month</strong></p>
+                      </div>
+                      <ul class="list-group text-center">
+                          <li class="list-group-item"><i class="fa fa-check"></i> CRUD</li>
+                          <li class="list-group-item"><i class="fa fa-check"></i> User story</li>
+                          <li class="list-group-item"><i class="fa fa-check"></i>  API </li>
+                      </ul>
+                      <div class="panel-footer ">
+                          <a class="btn btn-lg btn-block btn-primary" href="/jobs/2">没问题</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- /item -->
+
+              <!-- item -->
+              <div class="col-md-4 text-center">
+                  <div class="panel panel-success panel-pricing">
+                      <div class="panel-heading">
+                          <i class="fa fa-fighter-jet"></i>
+                          <h3>Growth Hacker</h3>
+                      </div>
+                      <div class="panel-body text-center">
+                          <p><strong>￥三万 ~ 五万 / Month</strong></p>
+                      </div>
+                      <ul class="list-group text-center">
+                          <li class="list-group-item"><i class="fa fa-check"></i> 市调</li>
+                          <li class="list-group-item"><i class="fa fa-check"></i> 行销</li>
+                          <li class="list-group-item"><i class="fa fa-check"></i>  管理 </li>
+                      </ul>
+                      <div class="panel-footer ">
+                          <a class="btn btn-lg btn-block btn-success" href="/jobs/3">算什么</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- /item -->
+
+              <!-- item -->
+              <div class="col-md-4 text-center">
+                  <div class="panel panel-info panel-pricing">
+                      <div class="panel-heading">
+                          <i class="fa fa-street-view"></i>
+                          <h3>全栈人</h3>
+                      </div>
+                      <div class="panel-body text-center">
+                          <p><strong>￥十万 ~ 二十万 / Month</strong></p>
+                      </div>
+                      <ul class="list-group text-center">
+                          <li class="list-group-item"><i class="fa fa-check"></i> 从0到1</li>
+                          <li class="list-group-item"><i class="fa fa-check"></i> 从1到N</li>
+                          <li class="list-group-item"><i class="fa fa-check"></i>  从N到N+1 </li>
+                      </ul>
+                      <div class="panel-footer ">
+                          <a class="btn btn-lg btn-block btn-info" href="/jobs/4">您认识YY吗</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- /item -->
+
+              <!-- item -->
+              <div class="col-md-4 text-center">
+                  <div class="panel panel-warning panel-pricing">
+                      <div class="panel-heading">
+                          <i class="fa fa-users"></i>
+                          <h3>战友</h3>
+                      </div>
+                      <div class="panel-body text-center">
+                          <p><strong> 无价</strong></p>
+                      </div>
+                      <ul class="list-group text-center">
+                          <li class="list-group-item"><i class="fa fa-check"></i> 自由</li>
+                          <li class="list-group-item"><i class="fa fa-check"></i> 自信</li>
+                          <li class="list-group-item"><i class="fa fa-check"></i> 自律 </li>
+                      </ul>
+                      <div class="panel-footer ">
+                          <a class="btn btn-lg btn-block btn-warning" href="/jobs/5">您姓X吗</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- /item -->
+
+          </div>
+      </div>
+  </section>
+  <!-- /Plans -->
