@@ -13,10 +13,10 @@ create_account = User.create([email: 'admin@gmail.com', password: '111111', pass
 
 
   create_workers = for i in 1..5 do
-                    Job.create!([title: "打雜#{i}號", description: "打醬油的", wage_lower_bound: "#{i*1000}", wage_upper_bound: "#{i*2000}"])
+                    Job.create!([title: "编程小白#{i}號", description: "累了就睡", wage_lower_bound: "#{i*1000}", wage_upper_bound: "#{i*2000}"])
 
                   end
-Job.create!([title: "CEO", description: "當老大", wage_lower_bound: "#{50000}",
+Job.create!([title: "战神", description: "當老大", wage_lower_bound: "#{50000}",
  wage_upper_bound: "#{100000}"])
 
  Job.create!([title: "VP", description: "當老二", wage_lower_bound: "#{30000}",

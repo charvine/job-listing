@@ -49,41 +49,45 @@
 
 
 
-<table class="table table boldered table striped custab" >
+<table class="table table-boldered table-striped custab" >
 
 
   <thead>
-         <tr>
-             <td>
+         <tr class="tableheading">
+             <td align="center" >
                  职缺</td>
-            <td> 工作内容 </td>
-             <td>薪资下限</td>
-             <td>薪资上限</td>
-             <td>刊登时间</td>
+            <td align="center"> 工作内容 </td>
+             <td align="center">薪资下限</td>
+             <td align="center">薪资上限</td>
+             <td align="center">刊登时间</td>
          </tr>
 
      </thead>
      <tbody>
   <% @jobs.each do |job| %>
   <tr>
-    <td>
+    <td align="center">
       <%= link_to(job.title, job_path(job)) %>
     </td>
-    <td>
+    <td align="center">
       <%= job.description %>
     </td>
 
-    <td>
+    <td align="center">
                     <%= job.wage_lower_bound %>
                 </td>
-                <td>
+                <td align="center">
                     <%= job.wage_upper_bound %>
                 </td>
 
-    <td>
+    <td align="center">
       <%= job.created_at %>
     </td>
   </tr>
   <% end %>
 </tbody>
 </table>
+
+<div class="text-center">
+  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+</div>
