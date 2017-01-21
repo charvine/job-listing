@@ -13,7 +13,7 @@ create_account = User.create([email: 'admin@gmail.com', password: '111111', pass
 
 
   create_workers = for i in 1..3 do
-                    Job.create!([title: "编程小白#{i}號", description: "没有一颗坚强的心", wage_lower_bound: "#{i*1000}", wage_upper_bound: "#{i*2000}"])
+                    Job.create!([title: "编程小白#{i}號", description: "有一颗坚强的心", wage_lower_bound: "#{i*1000}", wage_upper_bound: "#{i*2000}"])
 
                   end
 Job.create!([title: "战友", description: "自律、自信、自由", wage_lower_bound: "#{50000}",
